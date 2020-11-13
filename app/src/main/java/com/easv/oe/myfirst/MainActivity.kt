@@ -6,23 +6,23 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    private var tvHeader: TextView? = null
-    private var etName: EditText? = null
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        tvHeader = findViewById(R.id.tvHeader)
+        val tvHeader = findViewById<TextView>(R.id.tvHeader)
         val btnOK = findViewById<Button>(R.id.btnOK)
-        etName = findViewById(R.id.etName)
-        btnOK.setOnClickListener { v -> onClickOK() }
+        val etName = findViewById<EditText>(R.id.etName)
+        btnOK.setOnClickListener { v -> onClickOK(tvHeader, etName.text.toString()) }
     }
 
-    fun onClickOK(){
-        val name = etName?.text
-        tvHeader?.text = "Hello $name"
+    fun onClickOK(tv: TextView, name: String){
+        tv.text = "Hello $name"
     }
 }
