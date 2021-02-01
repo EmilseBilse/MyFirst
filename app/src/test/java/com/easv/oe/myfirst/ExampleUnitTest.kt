@@ -24,10 +24,8 @@ class ExampleUnitTest {
         val greetings = Greetings()
         greetings.greetingText.forEach { s ->
             var found = false
-            for (counter in 1..10000) {
-
-                if (greetings.get() == s)
-                    found = true
+            for (i in 1..10000) {
+                found = if (greetings.get().equals(s)) true else found
             }
             assertTrue(found)
         }
