@@ -25,7 +25,12 @@ class ExampleUnitTest {
         greetings.greetingText.forEach { s ->
             var found = false
             for (i in 1..10000) {
-                found = if (greetings.get().equals(s)) true else found
+                //found = if (greetings.get().equals(s)) true else found
+                if (greetings.get().equals(s))
+                {
+                    found = true
+                    break
+                }
             }
             assertTrue(found)
         }
