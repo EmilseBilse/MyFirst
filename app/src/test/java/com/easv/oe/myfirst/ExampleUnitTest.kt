@@ -19,5 +19,18 @@ class ExampleUnitTest {
         assertTrue(greetings.greetingText.contains(g))
     }
 
+    @Test
+    fun testGreetingsForRandomness() {
+        val greetings = Greetings()
+        greetings.greetingText.forEach { s ->
+            var found = false
+            for (counter in 1..10000) {
+
+                if (greetings.get() == s)
+                    found = true
+            }
+            assertTrue(found)
+        }
+    }
 
 }
