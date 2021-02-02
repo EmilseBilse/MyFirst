@@ -5,7 +5,7 @@ import java.util.*
 
 class Greetings {
 
-    val generator = Random()
+    private val generator = Random()
     val greetingText = arrayOf("Hello", "Hey", "Dear", "Have a nice day")
 
     public fun get(): String {
