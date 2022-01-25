@@ -2,7 +2,6 @@ package com.easv.oe.myfirst
 
 import java.util.*
 
-
 class Greetings {
 
     private val generator = Random()
