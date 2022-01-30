@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -17,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         /* The following declarations are done by the
         import of kotlinx.android.synthetic.main.activity_main.*/
-        val btnOK = findViewById<Button>(R.id.btnOK)
+        //val btnOK = findViewById<Button>(R.id.btnOK)
 
         btnOK.setOnClickListener { v -> onClickOK() }
     }
